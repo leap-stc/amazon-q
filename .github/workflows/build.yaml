@@ -30,7 +30,7 @@ jobs:
       uses: jupyterhub/repo2docker-action@master
       with:
         # Don't push the image during a PR build
-        NO_PUSH: "${{ github.event_name == 'pull_request' }}"
+        # NO_PUSH: "${{ github.event_name == 'pull_request' }}"
         # Make sure username & password/token pair matches your registry credentials
         DOCKER_USERNAME: ${{ secrets.QUAY_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
