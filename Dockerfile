@@ -1,5 +1,5 @@
 # 1. Inherit the full Leap ML image
-FROM quay.io/sed2194/leap-stc:latest
+FROM quay.io/jbusecke/leap-edu-image:latest
 
 # 2. Become root to install
 USER root
