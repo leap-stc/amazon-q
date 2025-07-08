@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# postBuild – run after conda env is created by repo2docker
+
+# Stop on any error, and print each command
+set -euo pipefail
+
+echo "=== Enabling Amazon Q Developer extension ==="
+# For JupyterLab 4.x this is usually a no-op (pip install auto-enables),
+# but this covers JupyterLab 3 compatibility too:
+jupyter server extension enable amazon_q_developer_jupyterlab_ext || true
+
+echo "=== Post-build finished: Amazon Q should now be available in JupyterLab ==="
+
